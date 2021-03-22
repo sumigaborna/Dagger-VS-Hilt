@@ -13,10 +13,13 @@ import com.sumigaborna.daggervshilt.binding.FragmentDataBindingComponent
 import com.sumigaborna.daggervshilt.databinding.FragmentImagesBinding
 import com.sumigaborna.daggervshilt.ui.common.ImageListAdapter
 import com.sumigaborna.daggervshilt.util.autoCleared
+import javax.inject.Inject
 
 class ImagesFragment : Fragment() {
 
-    //TODO: Implement via DI
+    //TODO: ViewModel implementation
+
+    @Inject
     lateinit var appExecutors: AppExecutors
 
     var binding by autoCleared<FragmentImagesBinding>()
