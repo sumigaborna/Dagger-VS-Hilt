@@ -1,0 +1,1 @@
+Even though Hilt is an extension on Dagger 2. Hilt aims to improve and alleviate the implementation of DI on Android. In this project a image viewer App will be created with Recycler View to display images, and on two different branches implement Dagger 2, and Hilt.
