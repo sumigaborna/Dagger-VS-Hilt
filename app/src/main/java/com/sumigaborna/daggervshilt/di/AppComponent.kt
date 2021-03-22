@@ -13,7 +13,9 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        ActivityBuildersModule::class
+        ActivityBuildersModule::class,
+        AppModule::class,
+        NetworkModule::class,
     ]
 )
 interface AppComponent : AndroidInjector<DaggerVSHiltApp> {
