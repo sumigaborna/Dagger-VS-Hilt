@@ -3,8 +3,9 @@ package com.sumigaborna.daggervshilt.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sumigaborna.daggervshilt.R
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,11 +1,12 @@
-package com.sumigaborna.daggervshilt.di.module
+package com.sumigaborna.daggervshilt.ui.images.di
 
 import com.sumigaborna.daggervshilt.ui.images.ImagesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
-abstract class FragmentBuildersModule {
+abstract class ImageFragmentBuilderModule {
+
     @ContributesAndroidInjector
-    abstract  fun contributeImagesFragment(): ImagesFragment
+    abstract fun contributeImagesFragment(): ImagesFragment
 }
