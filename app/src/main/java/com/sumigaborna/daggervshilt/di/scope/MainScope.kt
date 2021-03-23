@@ -1,4 +1,4 @@
-package com.sumigaborna.daggervshilt.di
+package com.sumigaborna.daggervshilt.di.scope
 
 import javax.inject.Scope
 

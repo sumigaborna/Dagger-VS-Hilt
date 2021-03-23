@@ -1,4 +1,4 @@
-package com.sumigaborna.daggervshilt.di
+package com.sumigaborna.daggervshilt.di.module
 
 import android.app.Application
 import android.content.Context

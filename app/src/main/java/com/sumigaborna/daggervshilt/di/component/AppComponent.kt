@@ -1,7 +1,11 @@
-package com.sumigaborna.daggervshilt.di
+package com.sumigaborna.daggervshilt.di.component
 
 import android.app.Application
 import com.sumigaborna.daggervshilt.DaggerVSHiltApp
+import com.sumigaborna.daggervshilt.di.module.ActivityBuildersModule
+import com.sumigaborna.daggervshilt.di.module.AppModule
+import com.sumigaborna.daggervshilt.di.module.NetworkModule
+import com.sumigaborna.daggervshilt.di.module.ViewModelBindModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -16,6 +20,7 @@ import javax.inject.Singleton
         ActivityBuildersModule::class,
         AppModule::class,
         NetworkModule::class,
+        ViewModelBindModule::class
     ]
 )
 interface AppComponent : AndroidInjector<DaggerVSHiltApp> {

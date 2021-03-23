@@ -1,4 +1,4 @@
-package com.sumigaborna.daggervshilt.ui
+package com.sumigaborna.daggervshilt.ui.images
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.sumigaborna.daggervshilt.AppExecutors
 import com.sumigaborna.daggervshilt.R
 import com.sumigaborna.daggervshilt.binding.FragmentDataBindingComponent
@@ -17,7 +19,8 @@ import javax.inject.Inject
 
 class ImagesFragment : Fragment() {
 
-    //TODO: ViewModel implementation
+    @Inject
+    lateinit var viewModelFactory : ViewModelProvider.Factory
 
     @Inject
     lateinit var appExecutors: AppExecutors
@@ -25,6 +28,7 @@ class ImagesFragment : Fragment() {
     var binding by autoCleared<FragmentImagesBinding>()
     var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
     private var adapter by autoCleared<ImageListAdapter>()
+    private val viewModel by viewModels<ImagesViewModel> { viewModelFactory }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,13 +47,21 @@ class ImagesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.lifecycleOwner = viewLifecycleOwner
+        initRecycler()
+        initImagesList()
+    }
+
+    private fun initRecycler(){
         val rvAdapter = ImageListAdapter(
             dataBindingComponent = dataBindingComponent,
             appExecutors = appExecutors
         ){}
         binding.rvImage.adapter = rvAdapter
         this.adapter = rvAdapter
+    }
+
+    private fun initImagesList(){
+        //TODO: Not yet implemented
     }
 }

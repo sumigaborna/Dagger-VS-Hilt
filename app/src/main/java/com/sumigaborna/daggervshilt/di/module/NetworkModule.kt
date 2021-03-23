@@ -1,4 +1,4 @@
-package com.sumigaborna.daggervshilt.di
+package com.sumigaborna.daggervshilt.di.module
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

@@ -1,6 +1,6 @@
-package com.sumigaborna.daggervshilt.di
+package com.sumigaborna.daggervshilt.di.module
 
-import com.sumigaborna.daggervshilt.ui.ImagesFragment
+import com.sumigaborna.daggervshilt.ui.images.ImagesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
