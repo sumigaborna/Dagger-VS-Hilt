@@ -13,7 +13,7 @@ abstract class ActivityBuildersModule {
 
     @MainScope
     @ContributesAndroidInjector(
-        modules = [ImageFragmentBuilderModule::class, ImagesBindModule::class ,ImagesModule::class]
+        modules = [ImageFragmentBuilderModule::class]
     )
     abstract fun contributeMainActivity(): MainActivity
 }
