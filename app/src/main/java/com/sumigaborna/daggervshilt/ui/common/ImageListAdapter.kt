@@ -5,24 +5,27 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
-import com.sumigaborna.daggervshilt.AppExecutors
 import com.sumigaborna.daggervshilt.R
-import com.sumigaborna.daggervshilt.data.ImageItem
+import com.sumigaborna.daggervshilt.data.ImagesResponseItem
 import com.sumigaborna.daggervshilt.databinding.ItemImageBinding
 
 class ImageListAdapter(
     private val dataBindingComponent: DataBindingComponent,
-    appExecutors: AppExecutors,
-    private val imageClickCallback: ((ImageItem) -> Unit)?
-) : DataBoundListAdapter<ImageItem, ItemImageBinding>(
-    appExecutors = appExecutors,
-    diffCallback = object : DiffUtil.ItemCallback<ImageItem>() {
-        override fun areItemsTheSame(oldItem: ImageItem, newItem: ImageItem): Boolean {
+    private val imageClickCallback: ((ImagesResponseItem) -> Unit)?
+) : DataBoundListAdapter<ImagesResponseItem, ItemImageBinding>(
+    diffCallback = object : DiffUtil.ItemCallback<ImagesResponseItem>() {
+        override fun areItemsTheSame(
+            oldItem: ImagesResponseItem,
+            newItem: ImagesResponseItem
+        ): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: ImageItem, newItem: ImageItem): Boolean {
-            return oldItem.imageUrl == newItem.imageUrl
+        override fun areContentsTheSame(
+            oldItem: ImagesResponseItem,
+            newItem: ImagesResponseItem
+        ): Boolean {
+            return oldItem.url == newItem.url && oldItem.albumId == newItem.albumId
         }
     }
 ) {
@@ -41,7 +44,7 @@ class ImageListAdapter(
         return binding
     }
 
-    override fun bind(binding: ItemImageBinding, item: ImageItem) {
+    override fun bind(binding: ItemImageBinding, item: ImagesResponseItem) {
         binding.imageItem = item
     }
 }

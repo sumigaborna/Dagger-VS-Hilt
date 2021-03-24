@@ -1,6 +1,7 @@
 package com.sumigaborna.daggervshilt.ui.images.di
 
 import androidx.lifecycle.ViewModel
+import com.sumigaborna.daggervshilt.di.scope.MainScope
 import com.sumigaborna.daggervshilt.di.scope.ViewModelKey
 import com.sumigaborna.daggervshilt.ui.images.ImagesViewModel
 import dagger.Binds

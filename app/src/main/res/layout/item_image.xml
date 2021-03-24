@@ -3,16 +3,18 @@
     <data>
         <variable
             name="imageItem"
-            type="com.sumigaborna.daggervshilt.data.ImageItem" />
+            type="com.sumigaborna.daggervshilt.data.ImagesResponseItem" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginVertical="10dp"
-            android:layout_marginHorizontal="20dp"/>
+            android:layout_marginHorizontal="20dp"
+            imageUrl="@{imageItem.url}"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

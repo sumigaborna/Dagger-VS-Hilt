@@ -17,7 +17,7 @@ import javax.inject.Singleton
         ActivityBuildersModule::class,
         AppModule::class,
         NetworkModule::class,
-        ViewModelBindModule::class
+        ViewModelFactoryModule::class
     ]
 )
 interface AppComponent : AndroidInjector<DaggerVSHiltApp> {

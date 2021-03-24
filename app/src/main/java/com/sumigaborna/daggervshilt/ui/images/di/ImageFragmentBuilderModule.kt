@@ -1,6 +1,7 @@
 package com.sumigaborna.daggervshilt.ui.images.di
 
-import com.sumigaborna.daggervshilt.ui.images.ImagesFragment
+import com.sumigaborna.daggervshilt.di.scope.MainScope
+import com.sumigaborna.daggervshilt.ui.images.ui.ImagesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
