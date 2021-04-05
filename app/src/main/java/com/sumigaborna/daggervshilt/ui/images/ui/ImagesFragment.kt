@@ -65,7 +65,6 @@ class ImagesFragment : Fragment(), Injectable {
 
     private fun initObservers() {
         viewModel.images.observe(viewLifecycleOwner, {
-            println("Observe is: $it")
             adapter.submitList(it)
         })
     }

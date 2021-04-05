@@ -5,7 +5,7 @@
             name="imageItem"
             type="com.sumigaborna.daggervshilt.data.ImagesResponseItem" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="200dp">
@@ -16,5 +16,5 @@
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="20dp"
             imageUrl="@{imageItem.url}"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>
